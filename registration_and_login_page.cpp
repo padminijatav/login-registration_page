@@ -56,9 +56,9 @@ void login(){
 
     cout<<"\t\t\tEnter the username and password : "<<endl;
     cout<<"\t\t\tUSERNAME : ";
-    cin>>userID;
+    getline(cin,userID);
     cout<<"\t\t\tPASSWORD : ";
-    cin>>password;
+    getline(cin,password)
     ifstream input("records.txt");
     while(input>>ID>>pass){
         if(ID==userID && pass==password){
@@ -84,9 +84,9 @@ void registration(){
     string rpass;
     system("cls");
     cout<<"\t\t\tEnter the username : ";
-    cin>>ruserID;
+    getline(cin,ruserID);
     cout<<"\t\t\tEnter the password : ";
-    cin>>rpassword;
+    getline(cin,rpassword);
 
     ofstream f1("records.txt",ios::app);
     f1<<ruserID<<' '<<rpassword<<endl;
@@ -107,7 +107,7 @@ void forgot(){
             int count =0;
             string suserID,sID,sPass;
             cout<<"\n\t\t\tEnter the username which you remembered : ";
-            cin>>suserID;
+            getline(cin,suserID);
 
             ifstream f2("records.txt");
             while(f2>>sID>>sPass){
