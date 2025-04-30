@@ -36,12 +36,12 @@ int main(){
             forgot();
             break;
         case 4:
-            cout<<"\t\t\tTHANK YOU... \n";
-            cout<<"\t\t\tExiting!!!\n";
+            cout<<"\t\t\t THANK YOU... \n";
+            cout<<"\t\t\t Exiting!!!\n";
         default:
             system("cls");
-            cout<<"\t\t\tInvalid Choice Entered !!\n";
-            cout<<"\t\t\tSelect choice from Menu Given \n";
+            cout<<"\t\t\t Invalid Choice Entered !!\n";
+            cout<<"\t\t\t Select choice from Menu Given \n";
     }
     return 0;
 }
@@ -54,10 +54,10 @@ void login(){
     string pass;
     system ("cls");
 
-    cout<<"\t\t\tEnter the username and password : "<<endl;
-    cout<<"\t\t\tUSERNAME : ";
+    cout<<"\t\t\t Enter the username and password : "<<endl;
+    cout<<"\t\t\t USERNAME : ";
     cin>>userID;
-    cout<<"\t\t\tPASSWORD : ";
+    cout<<"\t\t\t PASSWORD : ";
     cin>>password;
     ifstream input("records.txt");
     while(input>>ID>>pass){
@@ -83,9 +83,9 @@ void registration(){
     string rID;
     string rpass;
     system("cls");
-    cout<<"\t\t\tEnter the username : ";
+    cout<<"\t\t\t Enter the username : ";
     cin>>ruserID;
-    cout<<"\t\t\tEnter the password : ";
+    cout<<"\t\t\t Enter the password : ";
     cin>>rpassword;
 
     ofstream f1("records.txt",ios::app);
@@ -97,16 +97,16 @@ void registration(){
 void forgot(){
     int option;
     system("cls");
-    cout<<"\t\t\tYou forget the passwod? No worries \n";
-    cout<<"Press 1 to search your id by username "<<endl;
-    cout<<"Press 2 to go back to the main menu  "<<endl;
-    cout<<"\t\t\tEnter your choice : ";
+    cout<<"\t\t\t You forget the passwod? No worries \n";
+    cout<<" Press 1 to search your id by username "<<endl;
+    cout<<" Press 2 to go back to the main menu  "<<endl;
+    cout<<"\t\t\t Enter your choice : ";
     cin>>option;
     switch(option){
         case 1:{
             int count =0;
             string suserID,sID,sPass;
-            cout<<"\n\t\t\tEnter the username which you remembered : ";
+            cout<<"\n\t\t\t Enter the username which you remembered : ";
             cin>>suserID;
 
             ifstream f2("records.txt");
